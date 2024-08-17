@@ -10,12 +10,13 @@ const ProjectTestimonials = () => {
   return (
     <div className="project-testimonials my-10 rounded-t-lg">
       <div className="w-[95%] mx-auto sm:w-3/4 pt-3 border overflow-hidden dark:border-slate-500 shadow-sm rounded-xl ">
-        <div className="project-features grid grid-cols-3 grid-rows-1 mx-4 md:mx-10 pb-5 justify-items-center">
+        <div className="project-features grid grid-cols-3 grid-rows-1 mx-4 md:mx-10 py-5 justify-items-center ">
           <FeatureUI Icon={FcHeatMap} Label="Track" ratings={5} />
           <FeatureUI Icon={FcCollaboration} Label="Collaborate" ratings={4} />
           <FeatureUI Icon={FcPuzzle} Label="Plan" ratings={5} />
         </div>
-        <div className="w-full bg-gray-200 dark:bg-slate-400 p-7">
+        <div className="w-full bg-gray-200 dark:bg-slate-400 p-5">
+          <div className="text-center mb-5">Available Everywhere</div>
           <div className="platforms  md:w-3/4 grid xl:w-1/2 grid-cols-5 mx-auto justify-items-center  ">
             {PlatformUI()}
           </div>

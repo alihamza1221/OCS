@@ -35,7 +35,7 @@ const Hero: React.FC<ChartData> = ({ chartData }) => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top center",
       }}
-      className="p-6  "
+      className="p-6 mb-7"
     >
       <div className="mt-5 sm:text-5xl text-4xl overflow-hidden font-semibold max-h-min  text-black text-center ">
         <span className="relative overflow-hidden">
@@ -63,7 +63,7 @@ const Hero: React.FC<ChartData> = ({ chartData }) => {
           <FaArrowRight className=" group-hover:translate-x-1 transition-transform ml-2" />
         </Button>
       </div>
-      <div className="mt-10 mx-auto flex justify-center">
+      <div className="tracker mt-10 mx-auto flex justify-center ">
         <div className="productive-score mr-2 w-3 sm:w-6 md:mr-5 rotate-180 border border-gray-500 rounded-xl dark:bg-stone-900">
           <div
             className="w-full bg-green-600 rounded-xl"
