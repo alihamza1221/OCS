@@ -1,15 +1,33 @@
+import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
-export default function Home() {
+import ProjectTestimonials from "@/components/ProjectTestimonials";
+
+export type ChartDataItem = {
+  date: String;
+  productive: Number;
+  nonProductive: Number;
+};
+export interface ChartData {
+  chartData: ChartDataItem[];
+}
+const getSampleChartData = async () => {
+  //ssg
+  const chartData = await fetch("http://localhost:3000/api/sampleChartData", {
+    cache: "force-cache",
+  }).then((res) => res.json());
+  return chartData.data as ChartDataItem[];
+};
+
+const Home = async () => {
+  const chartData = await getSampleChartData();
+
   return (
     <>
       <NavBar />
-      <div className="bg-gradient-radial from-blue-500 to-green-500 h-screen mt-12">
-        Radial Gradient Background
-      </div>
-
-      <div className="bg-gradient-conic from-red-500 via-yellow-500 to-blue-500 h-screen">
-        Conic Gradient Background
-      </div>
+      <Hero chartData={chartData} />
+      <ProjectTestimonials />
     </>
   );
-}
+};
+
+export default Home;

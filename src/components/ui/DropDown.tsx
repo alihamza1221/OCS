@@ -16,7 +16,6 @@ export default function DropDown({
   label?: string;
   items: Array<string>;
 }) {
-  console.log(trigger, items);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="w-full">

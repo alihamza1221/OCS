@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import ThemeSwitch from "./ui/ThemeSwitch";
 import DropDown from "@/components/ui/DropDown";
@@ -18,23 +17,16 @@ const NavBar = () => {
   return (
     <>
       <div
-        className={`flex-col md:flex-row fixed left-0 top-0 flex justify-around z-50 backdrop-blur-sm dark:text-white bg-blur-50 border dark:border-gray-900 border-gray-100 w-full  shadow-sm p-3 md:p-2 gap-2`}
+        className={`flex-col md:flex-row relative left-0 top-0 flex justify-around z-50 backdrop-blur-sm dark:text-white bg-blur-50 border  w-full  p-4 md:p-4 gap-2`}
       >
-        <div className="sparo-logo flex justify-between items-center">
+        <div className="logo flex justify-between items-center">
           <div
             onClick={() => {
               router.refresh();
             }}
             className="flex justify-center items-center cursor-pointer"
           >
-            <Image
-              src="/images/sparo-logo.png"
-              width={80}
-              height={80}
-              placeholder="empty"
-              alt="Sparo online workspace logo"
-            />
-            <h1 className=" text-sm">co-working space</h1>
+            <h1 className="text-2xl">OCS</h1>
           </div>
 
           <div
@@ -47,7 +39,7 @@ const NavBar = () => {
         <div
           className={`${
             navigationModel ? "flex flex-col items-start" : "hidden"
-          } md:flex md:flex-row justify-center gap-2 md:items-center`}
+          } md:flex md:flex-row justify-center gap-4 md:items-center`}
         >
           <DropDown
             trigger={"features"}
