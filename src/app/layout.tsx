@@ -4,13 +4,13 @@ import { getServerSession } from "next-auth/next";
 import { Inter } from "next/font/google";
 import { Providers } from "@/context_Providers/ThemeProvider";
 import AuthProvider from "@/context_Providers/NextAuthProvider";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sparo Space",
+  title: "OCS",
   description:
     "An online co-working space. Work with friends, or make new ones, whilst working for great productivity, mental health and much more.",
 };
@@ -27,7 +27,10 @@ export default async function RootLayout({
         <body
           className={`${inter.className} bg-white dark:bg-slate-800 border-box m-0 p-0`}
         >
-          <Providers>{children} </Providers>
+          <Providers>
+            {children}
+            <SpeedInsights />
+          </Providers>
         </body>
       </html>
     </AuthProvider>
