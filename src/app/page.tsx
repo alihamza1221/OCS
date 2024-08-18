@@ -1,4 +1,5 @@
 import AppFeaturesUI from "@/components/AppFeaturesUI";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
 import ProjectTestimonials from "@/components/ProjectTestimonials";
@@ -28,6 +29,7 @@ const Home = async () => {
       <Hero chartData={chartData} />
       <ProjectTestimonials />
       <AppFeaturesUI />
+      <Footer />
     </>
   );
 };

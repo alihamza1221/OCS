@@ -42,7 +42,7 @@ const NavBar = () => {
           } md:flex md:flex-row justify-center gap-4 md:items-center`}
         >
           <DropDown
-            trigger={"features"}
+            trigger={"Features"}
             items={[
               "Your Online Co-Working Space",
               "Make New Friends",
@@ -50,7 +50,7 @@ const NavBar = () => {
             ]}
           />
           <DropDown
-            trigger={"features"}
+            trigger={"Testimonials"}
             items={[
               "Your Online Co-Working Space",
               "Make New Friends",
