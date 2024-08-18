@@ -14,10 +14,17 @@ export interface ChartData {
 }
 const getSampleChartData = async () => {
   //ssg
-  const chartData = await fetch("http://localhost:3000/api/sampleChartData", {
-    cache: "force-cache",
-  }).then((res) => res.json());
-  return chartData.data as ChartDataItem[];
+  try {
+    const chartData = await fetch(
+      `${process.env.BASE_URL}/api/sampleChartData`,
+      {
+        cache: "force-cache",
+      }
+    ).then((res) => res.json());
+    return chartData.data as ChartDataItem[];
+  } catch (e) {
+    return [];
+  }
 };
 
 const Home = async () => {
